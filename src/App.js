@@ -5,7 +5,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Home from './Home'
+import About from './About'
+import Model from './Model'
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -28,7 +29,7 @@ export default function BasicExample() {
             <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/dashboard">Dashboard</Link>
+            <Link to="/model">Model</Link>
           </li>
         </ul>
 
@@ -48,8 +49,8 @@ export default function BasicExample() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/dashboard">
-            <Dashboard />
+          <Route path="/model">
+            <Model />
           </Route>
         </Switch>
       </div>
@@ -60,18 +61,10 @@ export default function BasicExample() {
 // You can think of these components as "pages"
 // in your app.
 
-function About() {
+function Home() {
   return (
     <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
+      <h2>Home</h2>
     </div>
   );
 }
